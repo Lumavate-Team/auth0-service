@@ -1,13 +1,5 @@
 version: '3'
 
-volumes:
-  thor-data:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /Users/tbutler/Dev/thor-data
-
 services:
   auth0:
     container_name: "auth0"
@@ -22,7 +14,7 @@ services:
       - APP_SETTINGS=./config/dev.cfg
       - BASE_URL=http://$DOCKER_IP
       - PROTO=http://
-      - SERVICE_NAME=SampleAPI
+      - SERVICE_NAME=Auth0
       - WIDGET_URL_PREFIX=/ic/widget1/
     network_mode: bridge
 
