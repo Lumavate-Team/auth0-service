@@ -45,7 +45,7 @@ RUN apt-get update && apt-get install -y git \
   && git checkout $lumavate_service_util_branch \
   && rm -rf /python_packages/lumavate_service_util/.git
 
-FROM edit:base
+FROM quay.io/lumavate/edit:base
 
 EXPOSE 5000
 
